@@ -68,11 +68,11 @@ const Hero = () => {
                     <img loading='lazy' src={`${process.env.PUBLIC_URL}/img/img-hero-mobile.png`} alt='foto de um prato de macarronada, com um garfo levantando um pouco da comida' />
                 </picture>
             </BgImg>
-            <article className='textosHero'>
+            <TextosHero>
                 <h1><span>Sabores</span> na sua porta e <span>Receitas</span> nas suas mãos.</h1>
 
                 <h2>Descubra receitas incríveis e leve mais sabor para o seu dia a dia!</h2> 
-                <div className='botoesHero'>
+                <BotoesHero>
                     <BotaoIcon>
                         <Download color="white" size={20} />
                         <p>Download IOS</p>
@@ -81,8 +81,8 @@ const Hero = () => {
                         <Download color="white" size={20} />
                         <p>Download Android</p>
                     </BotaoIcon>
-                </div>
-            </article>
+                </BotoesHero>
+            </TextosHero>
         </ContainerHero>
     )
 }
