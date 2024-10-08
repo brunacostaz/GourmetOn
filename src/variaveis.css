@@ -1,0 +1,25 @@
+:root {
+
+    /* cores */
+    --bg-color: #FFF4DC;
+    --bege-claro: #FFEABE;
+    --bege-medio: #F2AF68;
+    --marrom-claro: #87694C;
+    --marrom-escuro: #4D301C;
+    --color-shadow: rgba(0, 0, 0, 0.24);
+
+    --h1-mobile: 1.4em;
+    --h1-tablet: 1.8em;
+    --h1-desktop: 2em;
+
+    --h2-mobile: 1.2em;
+    --h2-tablet: 1.4em;
+    --h2-desktop: 1.8em;
+
+    --p-mobile: 1em;
+    --p-tablet: 1.1em;
+    --p-desktop: 1.2em;
+
+    --margin-y: 2em;
+    --margin-x: 1.5em;
+}
