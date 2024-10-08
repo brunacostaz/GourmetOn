@@ -8,18 +8,22 @@
     --marrom-escuro: #4D301C;
     --color-shadow: rgba(0, 0, 0, 0.24);
 
+    /* tamanhos do h1 */
     --h1-mobile: 1.4em;
     --h1-tablet: 1.8em;
     --h1-desktop: 2em;
 
+    /* tamanhos do h2 */
     --h2-mobile: 1.2em;
     --h2-tablet: 1.4em;
     --h2-desktop: 1.8em;
 
+    /* tamanhos do p */
     --p-mobile: 1em;
     --p-tablet: 1.1em;
     --p-desktop: 1.2em;
 
+    /* espaçamentos vesticais e horizontais (modificar conforme o necessário)*/
     --margin-y: 2em;
     --margin-x: 1.5em;
 }
