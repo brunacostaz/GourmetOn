@@ -35,6 +35,7 @@ const ContainerDepoimentos = styled.div`
     flex-direction: row;
     justify-content: center;
     gap: 40px; 
+
   }
 `;
 
@@ -46,8 +47,8 @@ const CartaoDepoimento = styled.div`
   text-align: left;
   position: relative;
 
-  @media (min-width: 768px) {
-    width: 350px;
+  @media (min-width: 1024px) {
+    width: 400px;
   }
 
   &:after {
@@ -97,6 +98,11 @@ const SecaoDepoimentos = () => {
           <Avatar src={`${process.env.PUBLIC_URL}/img/Ana.png`} alt="Ana Lopes" />
           <Nome>Ana Lopes</Nome>
           <Texto>"Adoro a praticidade do Gourmet On! Além de receber comida deliciosa em minutos, as receitas me inspiram a cozinhar mais em casa. Um verdadeiro salvador para os dias corridos!"</Texto>
+        </CartaoDepoimento>
+        <CartaoDepoimento>
+          <Avatar src={`${process.env.PUBLIC_URL}/img/Joao.png`} alt="João Pereira" />
+          <Nome>João Pereira</Nome>
+          <Texto>"O Gourmet On me surpreendeu! Sempre consigo encontrar opções saudáveis e o filtro de dietas me ajuda muito. E ainda aprendi novas receitas para variar no cardápio."</Texto>
         </CartaoDepoimento>
         <CartaoDepoimento>
           <Avatar src={`${process.env.PUBLIC_URL}/img/Joao.png`} alt="João Pereira" />
