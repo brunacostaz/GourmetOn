@@ -2,7 +2,7 @@ import '../../variaveis.css'
 import styled from 'styled-components'
 
 const ContainerGourmet = styled.section`
-    width: 95%;
+    width: 98%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -19,7 +19,8 @@ const ContainerGourmet = styled.section`
 
 const TextosGourmet = styled.article`
     padding: var(--margin-y) 1em;
-    width: 80%;
+    max-width: 100%;
+    margin-right: 5em;
 
     h2 {
         font-size: var(--h1-mobile);
@@ -50,6 +51,10 @@ const TextosGourmet = styled.article`
             text-align: center;
             font-size: 16px;
         }
+    }
+
+    @media (min-width: 768px) {
+        width: 60%;
     }
 
     @media (min-width: 1280px) {

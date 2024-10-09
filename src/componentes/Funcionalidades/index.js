@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Heart, Bell, Utensils, Truck, Star, CookingPot } from 'lucide-react';
 
 const ContainerFuncionalidades = styled.section`
-  width: 100%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
