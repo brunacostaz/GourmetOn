@@ -26,5 +26,20 @@
     /* espaçamentos vesticais e horizontais (modificar conforme o necessário)*/
     --margin-y: 2em;
     --margin-x: 1.5em;
+<<<<<<< HEAD
 
 }
+=======
+}
+
+@media (max-width: 768px) {
+    .desktop-menu {
+      display: none;
+    }
+  
+    .hamburger-menu {
+      display: flex;
+    }
+  }
+  
+>>>>>>> 448f32bbf4585d59ec405fa3177df9193a242e5b
