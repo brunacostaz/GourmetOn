@@ -20,7 +20,7 @@ const GridFuncionalidades = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
-  width: 100%
+  width: 100%;
 
   @media (min-width: 768px) {
     grid-template-columns: repeat(2, 1fr); 
@@ -39,6 +39,13 @@ const Card = styled.div`
   padding: 1.5em;
   text-align: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 16px rgba(0,0,0,0.2);
+      cursor: pointer;
+    }
 `;
 
 const IconWrapper = styled.div`
