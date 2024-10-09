@@ -12,7 +12,8 @@ const Container = styled.div`
     width: 100%;
     box-sizing: border-box;
     background-color: var(--bege-claro);
-    margin: var(--margin-x) 0;
+    width: 100%;
+    margin: var(--margin-y) 0;
 `;
 
 const Title = styled.h2`

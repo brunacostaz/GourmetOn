@@ -8,7 +8,7 @@ const ContainerGourmet = styled.section`
     align-items: center;
     justify-content: space-around;
     gap: 5em;
-    padding: var(--margin-y) var(--margin-x) var(--margin-y) 0;
+    padding: var(--margin-y) var(--margin-x);
 `
 
 const TextosGourmet = styled.article`
@@ -56,6 +56,7 @@ const GourmetImages = styled.div`
         width: 150px;
         height: auto;
         border-radius: 8px;
+        filter: drop-shadow(10px 12px 10px var(--color-shadow));
     }
 
     .img-carne {

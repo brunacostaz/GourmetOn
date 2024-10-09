@@ -42,15 +42,12 @@ const BgImg = styled.div`
         height: auto;
         z-index: 1;
         // padding-left: 1em;
+        filter: drop-shadow(0 12px 12px var(--color-shadow));
     }
 
     @media (min-width: 768px) and (max-width: 1279px) {
         
     }
-`
-
-const ImgHero = styled.div`
-    filter: drop-shadow(0 12px 12px var(--color-shadow));
 `
 
 const TextosHero = styled.article`

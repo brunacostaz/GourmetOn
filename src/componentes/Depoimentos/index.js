@@ -5,8 +5,9 @@ import '../../variaveis.css';
 // Estilos para a seção
 const Secao = styled.section`
   background-color: rgba(135, 105, 78, 0.69);
-  padding: 100px 0; 
+  padding: 6em 0; 
   text-align: center;
+  width: 100%;
 `;
 
 const Titulo = styled.h2`

@@ -36,6 +36,7 @@ const Header = () => {
       left: 0,
       zIndex: 1000,
       boxSizing: 'border-box',
+      width: '100%'
     },
     logoContainer: {
       flex: 1,
