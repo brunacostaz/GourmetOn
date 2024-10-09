@@ -27,3 +27,14 @@
     --margin-y: 2em;
     --margin-x: 1.5em;
 }
+
+@media (max-width: 768px) {
+    .desktop-menu {
+      display: none;
+    }
+  
+    .hamburger-menu {
+      display: flex;
+    }
+  }
+  
