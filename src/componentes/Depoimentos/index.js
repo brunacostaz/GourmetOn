@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; 
 import styled from 'styled-components';
 import '../../variaveis.css';
 
@@ -30,12 +30,6 @@ const ContainerDepoimentos = styled.div`
     flex-direction: row;
     justify-content: center;
     gap: 60px; 
-  }
-  @media (min-width: 768px) {
-    flex-direction: row;
-    justify-content: center;
-    gap: 40px; 
-
   }
 `;
 
@@ -105,9 +99,9 @@ const SecaoDepoimentos = () => {
           <Texto>"O Gourmet On me surpreendeu! Sempre consigo encontrar opções saudáveis e o filtro de dietas me ajuda muito. E ainda aprendi novas receitas para variar no cardápio."</Texto>
         </CartaoDepoimento>
         <CartaoDepoimento>
-          <Avatar src={`${process.env.PUBLIC_URL}/img/Joao.png`} alt="João Pereira" />
-          <Nome>João Pereira</Nome>
-          <Texto>"O Gourmet On me surpreendeu! Sempre consigo encontrar opções saudáveis e o filtro de dietas me ajuda muito. E ainda aprendi novas receitas para variar no cardápio."</Texto>
+          <Avatar src={`${process.env.PUBLIC_URL}/img/Joaquim.png`} alt="Joaquim Figueroa" />
+          <Nome>Joaquim Figueroa</Nome>
+          <Texto>"Incrível como o Gourmet On facilita meu dia a dia. As refeições são saborosas e chegam sempre no horário. Sem contar que o atendimento ao cliente é excelente!"</Texto>
         </CartaoDepoimento>
       </ContainerDepoimentos>
     </Secao>
