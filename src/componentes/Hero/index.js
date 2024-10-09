@@ -8,14 +8,10 @@ const ContainerHero = styled.section`
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
     gap: 1em;
-    padding: var(--margin-y) var(--margin-x) var(--margin-y) 0;
+    padding: 6em var(--margin-x) var(--margin-y) 0;
     box-sizing: border-box;
-
-    @media (min-width: 768px) and (max-width: 1279px) {
-        gap: 4em;
-    }
 `
 
 const BgImg = styled.div`
@@ -24,12 +20,13 @@ const BgImg = styled.div`
     justify-content: end;
     position: relative;
     box-sizing: border-box;
+    width: 35%;
 
     .bgHero {
         position: absolute;
         top: 0;
         left: 0;
-        width: 60%;
+        width: 50%;
         height: 100%;
         background-color: var(--marrom-claro);
         border-radius: 0 20% 20% 0;
@@ -41,12 +38,25 @@ const BgImg = styled.div`
         max-width: 100%;
         height: auto;
         z-index: 1;
-        // padding-left: 1em;
+        padding-left: 1em;
         filter: drop-shadow(0 12px 12px var(--color-shadow));
     }
 
     @media (min-width: 768px) and (max-width: 1279px) {
-        
+        width: 45%;
+
+        .bgHero {
+            width: 60%;
+        }
+    }
+
+    @media (min-width: 1280px) {
+        width: 70%;
+        justify-content: center;
+
+        .bghero {
+            width: 70%;
+        }
     }
 `
 
@@ -78,6 +88,30 @@ const TextosHero = styled.article`
         font-weight: bold;
         display: inline-block;
     }
+
+    @media (min-width: 768px) and (max-width: 1279px) {
+        h1 {
+            font-size: var(--h1-tablet);
+            max-width: 340px
+        }
+
+        h2 {
+            font-size: var(--p-tablet);
+            max-width: 340px
+        }
+    }
+
+    @media (min-width: 1280px) {
+        h1 {
+            font-size: 2.5em;
+            max-width: 500px
+        }
+
+        h2 {
+            font-size: 1.5em;
+            max-width: 450px
+        }
+    }
 `
 
 const BotoesHero = styled.div`
@@ -96,7 +130,8 @@ const Hero = () => {
                 <div className='bgHero'></div>
                 <div className='imgHero'>
                     <picture>
-                        <source srcSet={`${process.env.PUBLIC_URL}/img/img-hero.png`} media='(min-width: 1024px)'/>
+                        <source srcSet={`${process.env.PUBLIC_URL}/img/img-hero-tablet.png`} media='(min-width: 768px) and (max-width: 1279px)'/>
+                        <source srcSet={`${process.env.PUBLIC_URL}/img/img-hero.png`} media='(min-width: 1280px)'/>
                         <img loading='lazy' src={`${process.env.PUBLIC_URL}/img/img-hero-mobile.png`} alt='foto de um prato de macarronada, com um garfo levantando um pouco da comida' />
                     </picture>
                 </div>
