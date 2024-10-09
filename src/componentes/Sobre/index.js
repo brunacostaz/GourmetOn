@@ -2,18 +2,24 @@ import '../../variaveis.css'
 import styled from 'styled-components'
 
 const ContainerGourmet = styled.section`
-    width: 100%;
+    width: 95%;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    gap: 5em;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 7em;
     padding: var(--margin-y) var(--margin-x);
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 0;
+    }
 `
 
 const TextosGourmet = styled.article`
     padding: var(--margin-y) 1em;
-    width: 50%;
+    width: 80%;
 
     h2 {
         font-size: var(--h1-mobile);
@@ -45,10 +51,14 @@ const TextosGourmet = styled.article`
             font-size: 16px;
         }
     }
+
+    @media (min-width: 1280px) {
+        width: 50%;
+    }
 `
 
 const GourmetImages = styled.div`
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 20px;
 
@@ -61,6 +71,10 @@ const GourmetImages = styled.div`
 
     .img-carne {
         margin-left: -90px;
+    }
+
+    @media (min-width: 768px) {
+        display: flex;
     }
 `
 
