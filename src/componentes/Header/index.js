@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import '../../variaveis.css'; 
+import React, { useState, useEffect, useRef } from 'react';
+import '../../variaveis.css';
 
-const Header = () => {
+const Header = ({ sobreRef, funcionalidadesRef, depoimentosRef, contatoRef }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const headerRef = useRef(null); 
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -13,6 +14,18 @@ const Header = () => {
     setIsMobile(window.innerWidth <= 768);
     if (window.innerWidth > 768) {
       setMenuOpen(false);
+    }
+  };
+
+  const scrollToSection = (ref) => {
+    if (ref.current && headerRef.current) {
+      const headerHeight = headerRef.current.offsetHeight;
+      const sectionTop = ref.current.offsetTop;
+      window.scrollTo({
+        top: sectionTop - headerHeight,
+        behavior: 'smooth'
+      });
+      setMenuOpen(false); 
     }
   };
 
@@ -36,7 +49,7 @@ const Header = () => {
       left: 0,
       zIndex: 1000,
       boxSizing: 'border-box',
-      width: '100%'
+      overflowX: 'hidden',
     },
     logoContainer: {
       flex: 1,
@@ -75,6 +88,7 @@ const Header = () => {
       boxShadow: '0 2px 10px var(--color-shadow)',
       padding: '10px',
       borderRadius: '5px',
+      zIndex: 1001,
     },
     mobileUl: {
       listStyleType: 'none',
@@ -87,17 +101,16 @@ const Header = () => {
   };
 
   return (
-    <header style={styles.header}>
+    <header style={styles.header} ref={headerRef}>
       <div style={styles.logoContainer}>
         <img src={`${process.env.PUBLIC_URL}/GourmetOn-logo.png`} alt="Logo" style={styles.logo} />
       </div>
       <nav style={styles.nav}>
         <ul style={styles.ul}>
-          <li style={styles.li}>Sobre</li>
-          <li style={styles.li}>Funcionalidades</li>
-          <li style={styles.li}>Receitas</li>
-          <li style={styles.li}>Depoimentos</li>
-          <li style={styles.li}>Newsletter</li>
+          <li style={styles.li} onClick={() => scrollToSection(sobreRef)}>Sobre</li>
+          <li style={styles.li} onClick={() => scrollToSection(funcionalidadesRef)}>Funcionalidades</li>
+          <li style={styles.li} onClick={() => scrollToSection(depoimentosRef)}>Depoimentos</li>
+          <li style={styles.li} onClick={() => scrollToSection(contatoRef)}>Contato</li>
         </ul>
       </nav>
       <div style={styles.hamburger} onClick={toggleMenu}>
@@ -107,11 +120,10 @@ const Header = () => {
       </div>
       <div style={styles.mobileMenu}>
         <ul style={styles.mobileUl}>
-          <li style={styles.li}>Sobre</li>
-          <li style={styles.li}>Funcionalidades</li>
-          <li style={styles.li}>Receitas</li>
-          <li style={styles.li}>Depoimentos</li>
-          <li style={styles.li}>Newsletter</li>
+          <li style={styles.li} onClick={() => scrollToSection(sobreRef)}>Sobre</li>
+          <li style={styles.li} onClick={() => scrollToSection(funcionalidadesRef)}>Funcionalidades</li>
+          <li style={styles.li} onClick={() => scrollToSection(depoimentosRef)}>Depoimentos</li>
+          <li style={styles.li} onClick={() => scrollToSection(contatoRef)}>Contato</li>
         </ul>
       </div>
     </header>
