@@ -7,6 +7,7 @@ const ContainerFuncionalidades = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 2em auto;
   padding: 2em 1em;
 `;
 
