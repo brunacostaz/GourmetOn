@@ -75,16 +75,6 @@ const Batata = styled.img`
     transform: translate(-50%, -50%) scaleX(-1);
     max-width: 80px;
     z-index: 2;
-
-    /* @media (max-width: 768px) {
-        top: 150px;
-        left: 75%;
-    }
-
-    @media (max-width: 480px) {
-        max-width: 60px;
-        top: 245px;
-    } */
 `;
 
 const Contato = () => {
