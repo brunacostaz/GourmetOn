@@ -4,7 +4,7 @@ import '../../variaveis.css';
 const Header = ({ sobreRef, funcionalidadesRef, depoimentosRef, contatoRef }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-  const headerRef = useRef(null); 
+  const headerRef = useRef(null);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -23,10 +23,17 @@ const Header = ({ sobreRef, funcionalidadesRef, depoimentosRef, contatoRef }) =>
       const sectionTop = ref.current.offsetTop;
       window.scrollTo({
         top: sectionTop - headerHeight,
-        behavior: 'smooth'
+        behavior: 'smooth',
       });
-      setMenuOpen(false); 
+      setMenuOpen(false);
     }
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
   };
 
   useEffect(() => {
@@ -47,12 +54,13 @@ const Header = ({ sobreRef, funcionalidadesRef, depoimentosRef, contatoRef }) =>
       width: '100%',
       top: 0,
       left: 0,
-      zIndex: 1000,
+      zIndex: 1000, 
       boxSizing: 'border-box',
       overflowX: 'hidden',
     },
     logoContainer: {
       flex: 1,
+      cursor: 'pointer',
     },
     logo: {
       width: '50px',
@@ -78,17 +86,20 @@ const Header = ({ sobreRef, funcionalidadesRef, depoimentosRef, contatoRef }) =>
     hamburger: {
       display: isMobile ? 'block' : 'none',
       cursor: 'pointer',
+      zIndex: 1500,
+      position: 'relative',
     },
     mobileMenu: {
       display: menuOpen ? 'block' : 'none',
-      position: 'absolute',
+      position: 'fixed', 
       top: '60px',
       right: '20px',
       backgroundColor: 'var(--bg-color)',
       boxShadow: '0 2px 10px var(--color-shadow)',
       padding: '10px',
       borderRadius: '5px',
-      zIndex: 1001,
+      zIndex: 2000, 
+      width: '200px', 
     },
     mobileUl: {
       listStyleType: 'none',
@@ -102,7 +113,7 @@ const Header = ({ sobreRef, funcionalidadesRef, depoimentosRef, contatoRef }) =>
 
   return (
     <header style={styles.header} ref={headerRef}>
-      <div style={styles.logoContainer}>
+      <div style={styles.logoContainer} onClick={scrollToTop}>
         <img src={`${process.env.PUBLIC_URL}/GourmetOn-logo.png`} alt="Logo" style={styles.logo} />
       </div>
       <nav style={styles.nav}>
