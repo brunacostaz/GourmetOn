@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../../variaveis.css'; 
+import '../../variaveis.css';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -36,7 +36,7 @@ const Header = () => {
       left: 0,
       zIndex: 1000,
       boxSizing: 'border-box',
-      width: '100%'
+      overflowX: 'hidden',
     },
     logoContainer: {
       flex: 1,
@@ -75,6 +75,7 @@ const Header = () => {
       boxShadow: '0 2px 10px var(--color-shadow)',
       padding: '10px',
       borderRadius: '5px',
+      zIndex: 1001,
     },
     mobileUl: {
       listStyleType: 'none',

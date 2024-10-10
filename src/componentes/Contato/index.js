@@ -13,14 +13,14 @@ const Container = styled.div`
     box-sizing: border-box;
     background-color: var(--bege-claro);
     width: 100%;
-    margin: var(--margin-y) 0;
+    //margin: var(--margin-y) 0;
 `;
 
 const Title = styled.h2`
     color: var(--marrom-escuro);
     font-size: 1.5em;
     margin: 0;
-    padding-bottom: 3em;
+    padding-bottom: 2em;
     text-align: center;
 `;
 
@@ -30,10 +30,10 @@ const Form = styled.form`
     width: 100%;
     max-width: 400px;
     background-color: white;
-    padding: 20px;
+    padding: 30px;
     border-radius: 15px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.24);
-    margin-top: 70px;
+    margin-top: 20px;
     position: relative;
     z-index: 1;
 `;
