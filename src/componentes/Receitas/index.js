@@ -161,21 +161,21 @@ const Receitas = () => {
 
             <Grid>
                 {comidas.length > 0 ? (
-                comidas.map((comida) => (
-                    <Card key={comida.id}>
-                    <ImagemComida>
-                        <img
-                        src={comida.image}
-                        alt={comida.title}
-                        style={{ maxWidth: '100%', maxHeight: '100%', borderRadius: '10px' }}
-                        />
-                    </ImagemComida>
-                    <NomeComida>{comida.title}</NomeComida>
-                    <ContainerBotoes>
-                        <Botao>Comprar</Botao>
-                        <Botao>Ver receita</Botao>
-                    </ContainerBotoes>
-                    </Card>
+                  comidas.map((comida) => (
+                      <Card key={comida.id}>
+                      <ImagemComida>
+                          <img
+                          src={comida.image}
+                          alt={comida.title}
+                          style={{ maxWidth: '100%', maxHeight: '100%', borderRadius: '10px' }}
+                          />
+                      </ImagemComida>
+                      <NomeComida>{comida.title}</NomeComida>
+                      <ContainerBotoes>
+                          <Botao>Comprar</Botao>
+                          <Botao>Ver receita</Botao>
+                      </ContainerBotoes>
+                      </Card>
                 ))
                 ) : (
                 <p>Nenhuma receita encontrada.</p>
