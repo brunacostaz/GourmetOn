@@ -6,6 +6,7 @@ import Sobre from './componentes/Sobre';
 import Funcionalidades from './componentes/Funcionalidades';
 import SecaoDepoimentos from './componentes/Depoimentos';
 import Footer from './componentes/Footer';
+import Receitas from './componentes/Receitas';
 
 function App() {
   const refs = {
@@ -27,7 +28,7 @@ function App() {
       <Hero />
       <div ref={refs.sobre}><Sobre /></div>
       <div ref={refs.funcionalidades}><Funcionalidades /></div>
-      <div ref={refs.receitas}></div>
+      <div ref={refs.receitas}><Receitas /></div>
       <div ref={refs.depoimentos}><SecaoDepoimentos /></div>
       <div ref={refs.contato}><Contato /></div>
       <Footer 
