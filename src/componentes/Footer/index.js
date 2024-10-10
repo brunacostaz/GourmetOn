@@ -1,12 +1,23 @@
-import React from 'react'; 
+import React from 'react';
 import '../../variaveis.css';
 
-const Footer = () => {
+const Footer = ({ sobreRef, funcionalidadesRef, receitasRef, depoimentosRef, newsletterRef }) => {
+  const scrollToSection = (ref) => {
+    if (ref.current) {
+      const headerHeight = 80; // Ajuste a altura do header se necessário
+      const sectionTop = ref.current.offsetTop;
+      window.scrollTo({
+        top: sectionTop - headerHeight,
+        behavior: 'smooth',
+      });
+    }
+  };
+
   const styles = {
     footerContainer: {
       width: '100%',
       backgroundColor: 'var(--marrom-claro)',
-      overflow: 'hidden',  // Evitar overflow horizontal
+      overflow: 'hidden',  
     },
     footer: {
       backgroundColor: 'var(--marrom-claro)',
@@ -19,7 +30,7 @@ const Footer = () => {
       maxWidth: '1200px',
       margin: '0 auto',
       width: '100%',
-      boxSizing: 'border-box', // Incluir padding na largura total
+      boxSizing: 'border-box', 
     },
     sectionWrapper: {
       display: 'flex',
@@ -76,11 +87,11 @@ const Footer = () => {
         <div style={styles.sectionWrapper}>
           <div style={styles.section}>
             <h3 style={styles.title}>Navegue pelo site</h3>
-            <a style={styles.link} href="#">Sobre</a>
-            <a style={styles.link} href="#">Funcionalidades</a>
-            <a style={styles.link} href="#">Receitas</a>
-            <a style={styles.link} href="#">Depoimentos</a>
-            <a style={styles.link} href="#">Newsletter</a>
+            <span style={styles.link} onClick={() => scrollToSection(sobreRef)}>Sobre</span>
+            <span style={styles.link} onClick={() => scrollToSection(funcionalidadesRef)}>Funcionalidades</span>
+            <span style={styles.link} onClick={() => scrollToSection(receitasRef)}>Receitas</span>
+            <span style={styles.link} onClick={() => scrollToSection(depoimentosRef)}>Depoimentos</span>
+            <span style={styles.link} onClick={() => scrollToSection(newsletterRef)}>Newsletter</span>
           </div>
           <div style={styles.section}>
             <h3 style={styles.title}>Nossas redes sociais</h3>
